@@ -55,7 +55,7 @@ Anvil is a fork of the [DSMapStudio repository](https://github.com/soulsmods/DSM
 * [PredatorCZ](https://github.com/PredatorCZ)
 * [Horkrux](https://github.com/horkrux)
 
-  # Libraries
+# Libraries
 * [SoulsFormats](https://github.com/JKAnderson/SoulsFormats) - Credit to TKGP
 * [SoapstoneLib](https://github.com/soulsmods/SoapstoneLib) - Credit to gracenotes
 * [HKLib](https://github.com/The12thAvenger/HKLib) - Credit to The12thAvenger
