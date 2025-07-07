@@ -18,6 +18,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <TrimmerRootAssembly Include="SoulsFormats" />
     <TrimmerRootAssembly Include="Anvil.Core" />
     <TrimmerRootAssembly Include="HKX2" />
@@ -47,9 +51,6 @@
         <DataProjectFiles Include="..\Anvil.Data\bin\$(Configuration)\net9.0-windows7.0\**\*" />
       </ItemGroup>
 
-      <Copy
-        SourceFiles="@(DataProjectFiles)"
-        DestinationFolder="$(OutputPath)%(RecursiveDir)"
-        SkipUnchangedFiles="true" />
+      <Copy SourceFiles="@(DataProjectFiles)" DestinationFolder="$(OutputPath)%(RecursiveDir)" SkipUnchangedFiles="true" />
     </Target>
 </Project>

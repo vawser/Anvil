@@ -49,7 +49,7 @@ internal class CreateMapModal : IModal
 
     public void OnGui()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         ImGui.PushStyleVarFloat(ImGuiStyleVar.WindowRounding, 7.0f * scale);
         ImGui.PushStyleVarFloat(ImGuiStyleVar.WindowBorderSize, 1.0f);

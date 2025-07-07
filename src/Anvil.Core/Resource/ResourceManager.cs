@@ -388,7 +388,7 @@ public static class ResourceManager
 
     public static void OnGuiDrawTasks(float w, float h)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (ActiveJobProgress.Count > 0)
         {

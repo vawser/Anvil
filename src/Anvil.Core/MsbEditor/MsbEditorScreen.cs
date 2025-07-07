@@ -923,7 +923,7 @@ public class MsbEditorScreen : EditorScreen, SceneTreeEventHandler
 
     public unsafe void OnGUI(string[] initcmd)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         // Docking setup
         //var vp = ImGui.GetMainViewport();
@@ -1239,7 +1239,7 @@ public class MsbEditorScreen : EditorScreen, SceneTreeEventHandler
 
         SceneTree.OnGui();
         PropSearch.OnGui(propSearchCmd);
-        if (AnvilCore.FirstFrame)
+        if (Anvil.FirstFrame)
         {
             ImGui.SetNextWindowFocus();
         }

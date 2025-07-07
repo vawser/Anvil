@@ -23,7 +23,7 @@ public class DisplayGroupsEditor
 
     public unsafe void OnGui(int dispCount)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
         ImGui.SetNextWindowSize(new Vector2(100, 100) * scale, 0);
 
         uint[] sdrawgroups = null;

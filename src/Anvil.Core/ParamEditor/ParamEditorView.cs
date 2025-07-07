@@ -572,7 +572,7 @@ public class ParamEditorView
 
     public void ParamView(bool doFocus, bool isActiveView)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (EditorDecorations.ImGuiTableStdColumns("paramsT", 3, true))
         {
@@ -809,7 +809,7 @@ public class ParamEditorView
         List<(HashSet<int>, HashSet<int>)> auxDiffCaches, IParamDecorator decorator, ref float scrollTo,
         bool doFocus, bool isPinned, Param.Column compareCol, PropertyInfo compareColProp)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (CFG.Current.UI_CompactParams)
         {

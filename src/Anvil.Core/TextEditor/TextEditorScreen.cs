@@ -178,7 +178,7 @@ public unsafe class TextEditorScreen : EditorScreen
             return;
         }
 
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         // Docking setup
         ImGui.PushStyleVarVec2(ImGuiStyleVar.WindowPadding, new Vector2(4, 4) * scale);
@@ -503,7 +503,7 @@ public unsafe class TextEditorScreen : EditorScreen
 
     private void EditorGUI(bool doFocus)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (Locator.ActiveProject == null || !Locator.ActiveProject.FMGBank.IsLoaded)
         {

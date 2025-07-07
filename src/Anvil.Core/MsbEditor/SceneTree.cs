@@ -211,7 +211,7 @@ public class SceneTree : IActionEventHandler
 
     private unsafe void MapObjectSelectable(Entity e, bool visicon, bool hierarchial = false)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         // Main selectable
         if (e is MapEntity me)
@@ -370,7 +370,7 @@ public class SceneTree : IActionEventHandler
             ImGui.SetNextItemAllowOverlap();
             var visible = e.EditorVisible;
             ImGui.SameLine();
-            ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMax().X - (18.0f * AnvilCore.GetUIScale()));
+            ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMax().X - (18.0f * Anvil.GetUIScale()));
             ImGui.PushStyleColorVec4(ImGuiCol.Text, visible
                 ? new Vector4(1.0f, 1.0f, 1.0f, 1.0f)
                 : new Vector4(0.6f, 0.6f, 0.6f, 1.0f));
@@ -505,7 +505,7 @@ public class SceneTree : IActionEventHandler
                                         var visible = parent.EditorVisible;
                                         ImGui.SameLine();
                                         ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMax().X -
-                                                            (18.0f * AnvilCore.GetUIScale()));
+                                                            (18.0f * Anvil.GetUIScale()));
                                         ImGui.PushStyleColorVec4(ImGuiCol.Text, visible
                                             ? new Vector4(1.0f, 1.0f, 1.0f, 1.0f)
                                             : new Vector4(0.6f, 0.6f, 0.6f, 1.0f));
@@ -530,7 +530,7 @@ public class SceneTree : IActionEventHandler
                                         var visible = parent.EditorVisible;
                                         ImGui.SameLine();
                                         ImGui.SetCursorPosX(ImGui.GetWindowContentRegionMax().X -
-                                                            (18.0f * AnvilCore.GetUIScale()));
+                                                            (18.0f * Anvil.GetUIScale()));
                                         ImGui.PushStyleColorVec4(ImGuiCol.Text, visible
                                             ? new Vector4(1.0f, 1.0f, 1.0f, 1.0f)
                                             : new Vector4(0.6f, 0.6f, 0.6f, 1.0f));
@@ -572,7 +572,7 @@ public class SceneTree : IActionEventHandler
 
     public unsafe void OnGui()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         ImGui.PushStyleColorVec4(ImGuiCol.ChildBg, new Vector4(0.145f, 0.145f, 0.149f, 1.0f));
         if (_configuration == Configuration.MapEditor)
@@ -602,7 +602,7 @@ public class SceneTree : IActionEventHandler
 
             ImGui.PopStyleVar(1);
 
-            if (AnvilCore.LowRequirementsMode)
+            if (Anvil.LowRequirementsMode)
             {
                 ImGui.NewLine();
                 ImGui.Text("  This editor is not available in low requirements mode.");

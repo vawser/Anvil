@@ -19,6 +19,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.1" />
     <PackageReference Include="DotNext.IO" Version="4.15.0" />
     <PackageReference Include="Microsoft.Toolkit.HighPerformance" Version="7.1.2" />
     <PackageReference Include="NativeFileDialogSharp" Version="0.6.0-alpha" />

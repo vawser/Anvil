@@ -190,7 +190,7 @@ public class AssetBrowserScreen
 
     public void OnGui()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (Locator.AssetLocator.Type == GameType.Undefined)
             return;

@@ -281,7 +281,7 @@ public class CFG
                 SaveConfig();
             }
         }
-        AnvilCore.UIScaleChanged?.Invoke(null, EventArgs.Empty);
+        Anvil.UIScaleChanged?.Invoke(null, EventArgs.Empty);
     }
 
     private static void LoadKeybinds()

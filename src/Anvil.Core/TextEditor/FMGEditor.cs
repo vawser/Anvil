@@ -242,7 +242,7 @@ public class PropertyEditor
             val = "";
         }
 
-        var height = (20.0f + ImGui.CalcTextSize(val).Y) * AnvilCore.GetUIScale();
+        var height = (20.0f + ImGui.CalcTextSize(val).Y) * Anvil.GetUIScale();
 
         if (ImGui.InputTextMultiline("##value", ref val, 2000, new Vector2(-1, height)))
         {

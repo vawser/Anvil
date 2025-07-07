@@ -69,7 +69,7 @@ public class SettingsMenu
                 {
                     // Round to 0.05
                     CFG.Current.UIScale = (float)Math.Round(_tempUiScale * 20) / 20;
-                    AnvilCore.UIScaleChanged?.Invoke(null, EventArgs.Empty);
+                    Anvil.UIScaleChanged?.Invoke(null, EventArgs.Empty);
                     _tempUiScale = CFG.Current.UIScale;
                 }
 
@@ -78,7 +78,7 @@ public class SettingsMenu
                 {
                     CFG.Current.UIScale = CFG.Default.UIScale;
                     _tempUiScale = CFG.Current.UIScale;
-                    AnvilCore.UIScaleChanged?.Invoke(null, EventArgs.Empty);
+                    Anvil.UIScaleChanged?.Invoke(null, EventArgs.Empty);
                 }
 
                 if (CFG.Current.ShowUITooltips)
@@ -86,10 +86,10 @@ public class SettingsMenu
                     ShowHelpMarker("Multiplies the user interface scale by your monitor's DPI setting.");
                     ImGui.SameLine();
                 }
-                ImGui.Checkbox($"Multiply UI scale by DPI ({(AnvilCore.Dpi / 96).ToString("P0", new NumberFormatInfo { PercentPositivePattern = 1, PercentNegativePattern = 1 })})", ref CFG.Current.UIScaleByDPI);
+                ImGui.Checkbox($"Multiply UI scale by DPI ({(Anvil.Dpi / 96).ToString("P0", new NumberFormatInfo { PercentPositivePattern = 1, PercentNegativePattern = 1 })})", ref CFG.Current.UIScaleByDPI);
                 if (ImGui.IsItemDeactivatedAfterEdit())
                 {
-                    AnvilCore.UIScaleChanged?.Invoke(null, EventArgs.Empty);
+                    Anvil.UIScaleChanged?.Invoke(null, EventArgs.Empty);
                 }
             }
 
@@ -113,7 +113,7 @@ public class SettingsMenu
                 }
                 if (ImGui.Checkbox("Chinese", ref CFG.Current.FontChinese))
                 {
-                    AnvilCore.FontRebuildRequest = true;
+                    Anvil.FontRebuildRequest = true;
                 }
 
                 if (CFG.Current.ShowUITooltips)
@@ -123,7 +123,7 @@ public class SettingsMenu
                 }
                 if (ImGui.Checkbox("Korean", ref CFG.Current.FontKorean))
                 {
-                    AnvilCore.FontRebuildRequest = true;
+                    Anvil.FontRebuildRequest = true;
                 }
 
                 if (CFG.Current.ShowUITooltips)
@@ -133,7 +133,7 @@ public class SettingsMenu
                 }
                 if (ImGui.Checkbox("Thai", ref CFG.Current.FontThai))
                 {
-                    AnvilCore.FontRebuildRequest = true;
+                    Anvil.FontRebuildRequest = true;
                 }
 
                 if (CFG.Current.ShowUITooltips)
@@ -143,7 +143,7 @@ public class SettingsMenu
                 }
                 if (ImGui.Checkbox("Vietnamese", ref CFG.Current.FontVietnamese))
                 {
-                    AnvilCore.FontRebuildRequest = true;
+                    Anvil.FontRebuildRequest = true;
                 }
 
                 if (CFG.Current.ShowUITooltips)
@@ -153,7 +153,7 @@ public class SettingsMenu
                 }
                 if (ImGui.Checkbox("Cyrillic", ref CFG.Current.FontCyrillic))
                 {
-                    AnvilCore.FontRebuildRequest = true;
+                    Anvil.FontRebuildRequest = true;
                 }
             }
 
@@ -920,7 +920,7 @@ public class SettingsMenu
 
     public void Display()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
         if (!MenuOpenState)
         {
             return;

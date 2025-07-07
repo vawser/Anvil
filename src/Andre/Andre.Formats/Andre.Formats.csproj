@@ -12,6 +12,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="BouncyCastle.Cryptography" Version="2.6.1" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\SoulsFormats\SoulsFormats\SoulsFormats.csproj" />
     <ProjectReference Include="..\Andre.Core\Andre.Core.csproj" />
   </ItemGroup>

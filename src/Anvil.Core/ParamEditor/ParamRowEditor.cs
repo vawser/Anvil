@@ -615,7 +615,7 @@ public class ParamRowEditor
         string activeParam, bool showPinOptions, bool isPinned, Param.Column col,
         ParamEditorSelectionState selection, Type propType, string Wiki, dynamic oldval)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
         var altName = cellMeta?.AltName;
 
         ImGui.PushStyleVarVec2(ImGuiStyleVar.ItemSpacing, new Vector2(0f, 10f) * scale);

@@ -121,7 +121,7 @@ public class ModelEditorScreen : EditorScreen, AssetBrowserEventHandler, SceneTr
 
     public unsafe void OnGUI(string[] commands)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
         // Docking setup
         //var vp = ImGui.GetMainViewport();
         Vector2 wins = ImGui.GetWindowSize();

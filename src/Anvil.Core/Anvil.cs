@@ -33,7 +33,7 @@ using Version = System.Version;
 
 namespace StudioCore;
 
-public class AnvilCore
+public class Anvil
 {
     private static double _desiredFrameLengthSeconds = 1.0 / 20.0f;
     private static readonly bool _limitFrameRate = true;
@@ -78,10 +78,10 @@ public class AnvilCore
     public static EventHandler UIScaleChanged;
     public static bool FontRebuildRequest;
 
-    public unsafe AnvilCore(IGraphicsContext context, string version)
+    public unsafe Anvil(IGraphicsContext context, string version)
     {
         _version = version;
-        _programTitle = $"Dark Souls Map Studio version {_version}";
+        _programTitle = $"Anvil - Version {_version}";
 
         UIScaleChanged += (_, _) =>
         {
@@ -421,8 +421,6 @@ public class AnvilCore
         {
             editor.OnProjectChanged(_projectSettings);
         }
-
-        
     }
 
     public unsafe void ApplyStyle()

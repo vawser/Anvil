@@ -63,7 +63,7 @@ public class HelpWindow
 
     public void Display()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (!MenuOpenState)
             return;

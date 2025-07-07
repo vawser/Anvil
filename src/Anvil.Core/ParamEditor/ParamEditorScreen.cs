@@ -785,7 +785,7 @@ public class ParamEditorScreen : EditorScreen
 
     public unsafe void OnGUI(string[] initcmd)
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         if (!_isShortcutPopupOpen && !_isMEditPopupOpen && !_isStatisticPopupOpen && !_isSearchBarActive)
         {
@@ -1698,7 +1698,7 @@ public class ParamEditorScreen : EditorScreen
 
     public void MassEditPopups()
     {
-        var scale = AnvilCore.GetUIScale();
+        var scale = Anvil.GetUIScale();
 
         // Popup size relies on magic numbers. Multiline maxlength is also arbitrary.
         if (ImGui.BeginPopup("massEditMenuRegex"))
