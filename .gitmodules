@@ -1,6 +1,0 @@
-[submodule "MeowDSIO"]
-	path = MeowDSIO
-	url = https://github.com/Meowmaritus/MeowDSIO
-[submodule "SoulsFormats"]
-	path = SoulsFormats
-	url = https://github.com/Meowmaritus/SoulsFormats
